@@ -1,12 +1,12 @@
-let slider;
+// let slider;
 //j - the length of the background
 let j = 1500;
 
 function setup() {
   createCanvas(1500, 800);
-slider = createSlider(0, 1500, 0);
-slider.position(100, 700);
-slider.style('width', '1300px');
+// slider = createSlider(0, 1500, 0);
+// slider.position(100, 700);
+// slider.style('width', '1300px');
 }
 
 function draw() {

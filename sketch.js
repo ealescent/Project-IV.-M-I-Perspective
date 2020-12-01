@@ -1,7 +1,5 @@
 let slider;
 let img;
-//j - the length of the background
-// let j = 1500;
 
 function setup() {
   createCanvas(3000, 800);
@@ -14,11 +12,6 @@ function setup() {
 function draw() {
   // let val = slider.value();
   background(23, 31, 38);
-
-// for (x = 0; x < j; x++) {
-//   fill(50);
-//   rect(0, 0, x, 800);
-// }
 
 //looping waves
 for(i = 50; i < 3000; i += 1136) {

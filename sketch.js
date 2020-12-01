@@ -19,7 +19,7 @@ image(img, i, 50, 1136, 700)
 }
 
 //photos
-for(p = 100; p < 3000; p+=700) {
+for(p = 150; p < 3000; p+=700) {
 fill(50);
 noStroke();
 rect(p, 100, 600, 600);

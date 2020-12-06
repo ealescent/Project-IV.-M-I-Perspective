@@ -1,9 +1,11 @@
 let slider;
-let img;
+let bkg;
+let dx = -2;
+var scrollSpeed = 1;
 
 function setup() {
   createCanvas(3000, 800);
-  img = loadImage("wave.jpg")
+  bkg = loadImage("wave.jpg")
 // slider = createSlider(0, 1500, 0);
 // slider.position(100, 700);
 // slider.style('width', '1300px');
@@ -15,7 +17,8 @@ function draw() {
 
 //looping waves
 for(i = 50; i < 3000; i += 1136) {
-image(img, i, 50, 1136, 700)
+image(bkg, i, 50, 1136, 700)
+
 }
 
 //photos

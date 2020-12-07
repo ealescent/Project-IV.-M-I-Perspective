@@ -33,6 +33,7 @@ rect(p, 100, 600, 600);
 arrow.display();
 
 }
+}
 
 class Arrow {
   constructor() {
@@ -46,3 +47,4 @@ class Arrow {
     circle(this.x, this.y, this.diameter);
   }
 }
+

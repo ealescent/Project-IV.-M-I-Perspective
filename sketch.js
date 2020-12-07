@@ -46,4 +46,3 @@ class Arrow {
     circle(this.x, this.y, this.diameter);
   }
 }
-}

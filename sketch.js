@@ -1,7 +1,5 @@
 let slider;
 let bkg;
-let dx = -2;
-var scrollSpeed = 1;
 
 function setup() {
   createCanvas(3000, 800);
@@ -17,7 +15,7 @@ function draw() {
 
 //looping waves
 for(i = 50; i < 3000; i += 1136) {
-image(bkg, i, 50, 1136, 700)
+image(bkg, i = i - 1, 50, 1136, 700);
 
 }
 

@@ -18,7 +18,7 @@ function draw() {
 
 //looping waves
 for(i = 50; i < 3000; i += 1136) {
-image(bkg, i = i - 1, 50, 1136, 700);
+image(bkg, i, 50, 1136, 700);
 
 }
 

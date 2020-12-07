@@ -18,10 +18,7 @@ function draw() {
 
 //looping waves
 for(i = 50; i < 3000; i += 1136) {
-image(bkg, i = i - 1, 50, 1136, 700);
-// i+ frameCount (goes of the edge doesn't come back)
-// one more image than needed; instead of frameCount (move-pop)
-// frameCount % ...
+image(bkg, i, 50, 1136, 700);
 }
 
 //photos

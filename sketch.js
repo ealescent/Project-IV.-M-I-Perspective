@@ -1,6 +1,7 @@
 let slider;
 let bkg;
 let arrow;
+let i;
 
 function setup() {
   createCanvas(3000, 800);
@@ -19,14 +20,13 @@ function draw() {
 
 //looping waves
 for(i = 50; i < 3000; i += 1136) {
-image(bkg, i, 50, 1136, 700);
+image(bkg, i - frameCount, 50, 1136, 700);
 
 
-// i+ frameCount (goes of the edge doesn't come back)
+// i+ frameCount (goes off the edge doesn't come back)
 // one more image than needed; instead of frameCount (move-pop)
 // frameCount % ...
 }
-
 //photos
 for(p = 150; p < 3000; p+=700) {
 fill(50);

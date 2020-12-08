@@ -1,7 +1,6 @@
 let slider;
 let bkg;
 let arrow;
-let i;
 
 function setup() {
   createCanvas(3000, 800);

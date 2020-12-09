@@ -16,7 +16,6 @@ arrow = new Arrow();
 function draw() {
   let val = slider.value();
   translate(-val*1.33, 0)
-  
   background(23, 31, 38);
 
 //looping waves

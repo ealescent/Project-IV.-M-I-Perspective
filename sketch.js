@@ -38,7 +38,9 @@ noStroke();
 rect(p, 100, 600, 600);
 
 //actual photos
-// image(img, 100, 600, img.height/);
+image(img, 115, 100, 3024/7, 4032/7);
+// console.log(img);
+
 
 }
 }

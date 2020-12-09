@@ -38,8 +38,7 @@ noStroke();
 rect(p, 100, 600, 600);
 
 //actual photos
-// img.resize()
-// image(img, 0, 0);
+// image(img, 100, 600, img.height/);
 
 }
 }

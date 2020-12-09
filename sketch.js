@@ -2,10 +2,11 @@ let slider;
 let bkg;
 let img;
 let easing = .05;
+let song;
 
 function preload() {
-
   img = loadImage('vone.jpg');
+  song = loadSound('music.mp3');
 }
   
 

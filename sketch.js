@@ -1,7 +1,6 @@
 let slider;
 let bkg;
 let img;
-let easing = .05;
 let song;
 
 function preload() {

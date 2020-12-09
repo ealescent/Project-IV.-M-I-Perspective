@@ -1,7 +1,13 @@
 let slider;
 let bkg;
-let arrow;
+let img;
 let easing = .05;
+
+function preload() {
+
+  img = loadImage('vone.jpg');
+}
+  
 
 function setup() {
   createCanvas(1000, 800);
@@ -10,7 +16,6 @@ slider = createSlider(0, 1500, 0);
 slider.position(25, 760);
 slider.style('width', '950px');
 
-arrow = new Arrow();
 }
 
 function draw() {
@@ -32,23 +37,11 @@ fill(50);
 noStroke();
 rect(p, 100, 600, 600);
 
-
-//arrow
-arrow.display();
+//actual photos
+// img.resize()
+// image(img, 0, 0);
 
 }
 }
 
-class Arrow {
-  constructor() {
-    this.x = 700;
-    this.y = 400;
-    this.diameter = 30;
-  }
-
-  display() {
-    fill(255, 30);
-    circle(this.x, this.y, this.diameter);
-  }
-}
 

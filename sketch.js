@@ -42,12 +42,11 @@ image(img, 150, 100, 3024/7, 4032/7);
 // console.log(img);
 
 //slider info
-fill(50, 120)
-circle(50, 650, 70)
-fill(255)
-text('Slider', 35, 645)
-text('below', 33, 660)
-
+fill(50, 120);
+circle(50, 650, 70);
+fill(255);
+text('Slider', 35, 645);
+text('below', 33, 660);
 }
 }
 

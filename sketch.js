@@ -33,15 +33,21 @@ image(bkg, i - frameCount/8, 50, 1136, 700);
 // frameCount % ...
 }
 //photos
-for(p = 115; p < 3000; p+=725) {
+for(p = 830; p < 3000; p+=725) {
 fill(50);
 noStroke();
 rect(p, 100, 600, 600);
 
 //actual photos
-image(img, 115, 100, 3024/7, 4032/7);
+image(img, 150, 100, 3024/7, 4032/7);
 // console.log(img);
 
+//slider info
+fill(50)
+circle(50, 650, 70)
+fill(255)
+text('Slider', 35, 645)
+text('below', 33, 660)
 
 }
 }

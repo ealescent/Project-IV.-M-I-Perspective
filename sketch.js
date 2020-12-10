@@ -38,8 +38,10 @@ noStroke();
 rect(p, 100, 600, 600);
 
 //actual photos
+push();
 image(img, 150, 100, 3024/7, 4032/7);
 // console.log(img);
+pop();
 
 //slider info
 fill(50, 120);

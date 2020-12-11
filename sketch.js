@@ -56,7 +56,7 @@ text('below', 33, 660);
 //song and song button
 push();
 fill(255, 100);
-ellipse(100, 26, 120, 30);
+rect(40, 11, 120, 30, 10)
 pop();
 if (song.isPlaying()) {
   text('Click to Stop Music', 50, 30);
@@ -66,21 +66,40 @@ if (song.isPlaying()) {
 
 //info button
 push();
-fill(50);
+fill(50, 230)
 circle(130, 110, 35);
 fill(255);
-text('i', 128, 113);
+textSize(16)
+text('i', 128, 115);
 pop();
 
-//info text box picture 1
+//info textbox picture 1
 if (mouseIsHovered()) {
   fill(50);
   rect(mouseX, mouseY, 200, 60);
   fill(255);
   text('Author: Victoria Oury', mouseX + 20, mouseY + 20);
   text('Title: Shanghai in Blue', mouseX +20, mouseY + 35);
-  text('Time: 2019', mouseX +20, mouseY + 50);
+  text('Time: Sep 2019', mouseX +20, mouseY + 50);
 }
+
+//info button (can't make a for loop as they are in different distances :( 
+push();
+fill(50, 230);
+circle(800, 110, 35);
+fill(255);
+textSize(16);
+text('i', 798, 115);
+pop();
+//info textbox picture 2
+// if (mouseIsHovered()){
+//   fill(50);
+//   rect(mouseX, mouseY, 200, 60);
+//   fill(255);
+//   text('Author:', mouseX+ 20, mouseY +20);
+//   text('Title:', mouseX+20, mouseY+35);
+//   text('Time:', mouseX+20, mouseY+50);
+// } 
 }
 
 //song
@@ -91,7 +110,17 @@ function mousePressed() {
     song.play();
   }
 }
-
+//hover for info pic 1
+push();
 function mouseIsHovered() {
-  return dist(mouseX, mouseY, 130, 110) < 35/2
+  return dist(mouseX, mouseY, 130, 110) < 35/2;
 }
+pop();
+
+//hover for info pic 2
+// push();
+// function mouseIsHovered() {
+//   return dist(mouseX, mouseY, 800, 110) < 35/2 
+// }
+// pop();
+

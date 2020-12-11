@@ -58,11 +58,21 @@ if (song.isPlaying()) {
   text('Click to Play Music', 50, 30);
 }
 
+//info button
+push();
+fill(50);
+circle(130, 110, 35);
+fill(255);
+text('i', 128, 113);
+pop();
+
 if (mouseIsHovered()) {
   fill(50);
   rect(mouseX, mouseY, 200, 60);
   fill(255);
-  text('Vicky', mouseX + 20, mouseY + 20);
+  text('Author: Victoria Oury', mouseX + 20, mouseY + 20);
+  text('Title: Shanghai in Blue', mouseX +20, mouseY + 35);
+  text('Time: 2019', mouseX +20, mouseY + 50);
 }
 }
 
@@ -76,5 +86,6 @@ function mousePressed() {
 }
 
 function mouseIsHovered() {
-  return mouseIsPressed;
+  // return mouseIsPressed;
+  return dist(mouseX, mouseY, 130, 110) < 35/2
 }

@@ -9,7 +9,7 @@ function preload() {
   img = loadImage('vone.jpg');
   smile = loadImage('smile.JPG')
   google = loadImage('google.JPG')
-  song = loadSound('music.mp3');
+  song = loadSound('Others.mp3');
 }
   
 function setup() {

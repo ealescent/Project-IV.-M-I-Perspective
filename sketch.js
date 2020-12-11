@@ -59,9 +59,10 @@ if (song.isPlaying()) {
 }
 
 if (mouseIsHovered()) {
-  fill(50, 100);
-  rect(mouseX, mouseY, 300, 50);
-  text('Vicky', mouseX, mouseY);
+  fill(50);
+  rect(mouseX, mouseY, 200, 60);
+  fill(255);
+  text('Vicky', mouseX + 20, mouseY + 20);
 }
 }
 

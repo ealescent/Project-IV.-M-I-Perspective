@@ -57,6 +57,12 @@ if (song.isPlaying()) {
 } else {
   text('Click to Play Music', 50, 30);
 }
+
+if (mouseIsHovered()) {
+  fill(50, 100);
+  rect(mouseX, mouseY, 300, 50);
+  text('Vicky', mouseX, mouseY);
+}
 }
 
 //song
@@ -68,4 +74,6 @@ function mousePressed() {
   }
 }
 
-
+function mouseIsHovered() {
+  return mouseIsPressed;
+}

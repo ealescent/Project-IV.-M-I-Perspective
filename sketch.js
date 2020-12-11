@@ -1,14 +1,10 @@
 let slider;
 let bkg;
 let img;
-let smile;
-let google;
 let song;
 
 function preload() {
   img = loadImage('vone.jpg');
-  smile = loadImage('smile.JPG')
-  google = loadImage('google.JPG')
   song = loadSound('music.mp3');
 }
   
@@ -40,8 +36,6 @@ rect(p, 100, 600, 600);
 //actual photos
 push();
 image(img, 150, 100, 3024/7, 4032/7);
-image(smile, 830, 100, 600, 600)
-image(google, 2280, 100, 600, 500)
 // console.log(img);
 pop();
 
@@ -72,6 +66,7 @@ fill(255);
 text('i', 128, 113);
 pop();
 
+//info text box picture 1
 if (mouseIsHovered()) {
   fill(50);
   rect(mouseX, mouseY, 200, 60);
@@ -92,6 +87,5 @@ function mousePressed() {
 }
 
 function mouseIsHovered() {
-  // return mouseIsPressed;
   return dist(mouseX, mouseY, 130, 110) < 35/2
 }

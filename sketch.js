@@ -2,7 +2,7 @@ let slider;
 let bkg;
 let img;
 let smile;
-let google;
+let lights;
 let song;
 let x = 40;
 let y = 11;
@@ -10,7 +10,7 @@ let y = 11;
 function preload() {
   img = loadImage('vone.jpg');
   smile = loadImage('smile.JPG')
-  google = loadImage('google.JPG')
+  lights = loadImage('lights.JPG')
   song = loadSound('apocalypse.mp3');
     song.setVolume(0.07)
 }
@@ -26,7 +26,7 @@ slider.style('width', '950px');
 
 function draw() {
   let val = slider.value();
-  translate(-val*1.33, 0)
+  translate(-val*1.38, 0)
   background(23, 31, 38);
 
 //looping waves
@@ -44,7 +44,7 @@ rect(p, 100, 600, 600);
 push();
 image(img, 150, 100, 3024/6.75, 4032/6.75);
 image(smile, 810, 110, 580, 580)
-image(google, 2280, 100, 600, 500)
+image(lights, 2370, 110, 580, 580)
 // console.log(img);
 pop();
 
@@ -104,9 +104,43 @@ pop();
   text('Location: Cape Town', 640 + 10, 590 + 65);
   pop()
 
+//Info Button 3
+push();
+fill(50, 230)
+circle(1560, 210, 35);
+fill(255);
+textSize(16)
+text('i', 1558, 115);
+pop()
 
+  push();
+  fill(50);
+  rect(1420, 230, 150, 60);
+  fill(255);
+  text('Author: Victoria Oury', 1420 + 10, 230 + 20);
+  text('Title:', 1420 + 10, 230 + 35);
+  text('Time:', 1420 + 10, 230 + 50);
+  pop();
 
-
+  
+//Info Button 4
+  push();
+  fill(50, 230)
+  circle(2340, 510, 35);
+  fill(255);
+  textSize(16)
+  text('i', 2338, 515);
+  pop()
+  
+    push();
+    fill(50);
+    rect(2200, 530, 150, 75);
+    fill(255);
+    text('Author: Ethan Lan', 2200 + 10, 530 + 20);
+    text('Title: "Expletive Hallway"', 2200 + 10, 530 + 35);
+    text('Time: Fall 2019', 2200 + 10, 530 + 50);
+    text('Location: Hangzhou', 2200 + 10, 530 + 65);
+    pop();
  }
 
 //song

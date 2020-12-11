@@ -1,10 +1,14 @@
 let slider;
 let bkg;
 let img;
+let smile;
+let google;
 let song;
 
 function preload() {
   img = loadImage('vone.jpg');
+  smile = loadImage('smile.JPG')
+  google = loadImage('google.JPG')
   song = loadSound('music.mp3');
 }
   
@@ -36,6 +40,8 @@ rect(p, 100, 600, 600);
 //actual photos
 push();
 image(img, 150, 100, 3024/7, 4032/7);
+image(smile, 830, 100, 600, 600)
+image(google, 2280, 100, 600, 500)
 // console.log(img);
 pop();
 

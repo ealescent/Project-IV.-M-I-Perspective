@@ -11,8 +11,8 @@ function preload() {
   img = loadImage('vone.jpg');
   smile = loadImage('smile.JPG')
   google = loadImage('google.JPG')
-  song = loadSound('Others.mp3');
-    song.setVolume(0.03)
+  song = loadSound('apocalypse.mp3');
+    song.setVolume(0.07)
 }
   
 function setup() {
@@ -43,7 +43,7 @@ rect(p, 100, 600, 600);
 //actual photos
 push();
 image(img, 150, 100, 3024/6.75, 4032/6.75);
-image(smile, 830, 100, 600, 600)
+image(smile, 810, 110, 580, 580)
 image(google, 2280, 100, 600, 500)
 // console.log(img);
 pop();

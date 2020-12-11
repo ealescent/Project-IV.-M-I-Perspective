@@ -8,7 +8,6 @@ function preload() {
   song = loadSound('music.mp3');
 }
   
-
 function setup() {
   createCanvas(1000, 800);
   bkg = loadImage("wave.jpg")
@@ -26,12 +25,9 @@ function draw() {
 //looping waves
 for(i = 0; i < 100000; i += 1136) {
 image(bkg, i - frameCount/8, 50, 1136, 700);
-
-// i+ frameCount (goes off the edge doesn't come back)
-// one more image than needed; instead of frameCount (move-pop)
-// frameCount % ...
 }
-//photos
+
+//photos preview rects
 for(p = 830; p < 3000; p+=725) {
 fill(50);
 noStroke();
@@ -50,6 +46,8 @@ fill(255);
 text('Slider', 35, 645);
 text('below', 33, 660);
 }
+
+//song and song button
 push();
 fill(255, 100);
 ellipse(100, 26, 120, 30);
@@ -61,7 +59,7 @@ if (song.isPlaying()) {
 }
 }
 
-
+//song
 function mousePressed() {
   if (song.isPlaying()) {
     song.pause();

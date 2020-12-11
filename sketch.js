@@ -50,6 +50,24 @@ fill(255);
 text('Slider', 35, 645);
 text('below', 33, 660);
 }
+push();
+fill(255, 100);
+ellipse(100, 26, 120, 30);
+pop();
+if (song.isPlaying()) {
+  text('Click to Stop Music', 50, 30);
+} else {
+  text('Click to Play Music', 50, 30);
+}
+}
+
+
+function mousePressed() {
+  if (song.isPlaying()) {
+    song.pause();
+  } else {
+    song.play();
+  }
 }
 
 

@@ -35,14 +35,14 @@ image(bkg, i - frameCount/8, 50, 1136, 700);
 }
 
 //photos preview rects
-for(p = 830; p < 3000; p+=725) {
+for(p = 800; p < 3000; p+=780) {
 fill(50);
 noStroke();
 rect(p, 100, 600, 600);
 
 //actual photos
 push();
-image(img, 150, 100, 3024/7, 4032/7);
+image(img, 150, 100, 3024/6.75, 4032/6.75);
 image(smile, 830, 100, 600, 600)
 image(google, 2280, 100, 600, 500)
 // console.log(img);
@@ -70,45 +70,40 @@ if (song.isPlaying()) {
 //info button 1
 push();
 fill(50, 230)
-circle(130, 110, 35);
+circle(620, 110, 35);
 fill(255);
 textSize(16)
-text('i', 128, 115);
+text('i', 618, 115);
 pop()
 
-d1 = dist(mouseX, mouseY, 130, 110);
-
-if (d1 < 17.5) {
   push();
   fill(50);
-  rect(mouseX, mouseY, 200, 60);
+  rect(610, 130, 170, 60);
   fill(255);
-  text('Author: Victoria Oury', mouseX + 20, mouseY + 20);
-  text('Title: Shanghai in Blue', mouseX +20, mouseY + 35);
-  text('Time: Sep 2019', mouseX +20, mouseY + 50);
+  text('Author: Victoria Oury', 610 + 10, 130 + 20);
+  text('Title: Shanghai in Blue', 610 + 10, 130 + 35);
+  text('Time: Sep 2019', 610 + 10, 130 + 50);
   pop();
-}
+
 //info button 2 (can't make a for loop as they are in different distances :( 
 push();
 fill(50, 230);
-circle(800, 110, 35);
+circle(780, 570, 35);
 fill(255);
 textSize(16);
-text('i', 798, 115);
+text('i', 778, 574);
 pop();
 
-d2 = dist(mouseX, mouseY, 800, 110);
-
-if (d2 < 17.5) {
   push()
   fill(50);
-  rect(mouseX, mouseY, 200, 60);
+  rect(640, 590, 150, 78);
   fill(255);
-  text('Author:', mouseX+ 20, mouseY +20);
-  text('Title:', mouseX+20, mouseY+35);
-  text('Time:', mouseX+20, mouseY+50);
+  text('Author: Ethan Lan', 640 + 10, 590 + 20);
+  text('Title: "Smile!"', 640 + 10, 590 + 35);
+  text('Time: Summer 2019', 640 + 10, 590 + 50);
+  text('Location: Cape Town', 640 + 10, 590 + 65);
   pop()
-} 
+
 
 
 

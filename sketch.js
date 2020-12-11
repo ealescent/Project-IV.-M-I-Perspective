@@ -4,12 +4,15 @@ let img;
 let smile;
 let google;
 let song;
+let x = 40;
+let y = 11;
 
 function preload() {
   img = loadImage('vone.jpg');
   smile = loadImage('smile.JPG')
   google = loadImage('google.JPG')
   song = loadSound('Others.mp3');
+    song.setVolume(0.03)
 }
   
 function setup() {
@@ -56,7 +59,7 @@ text('below', 33, 660);
 //song and song button
 push();
 fill(255, 100);
-rect(40, 11, 120, 30, 10)
+rect(x, y, 120, 30, 10)
 pop();
 if (song.isPlaying()) {
   text('Click to Stop Music', 50, 30);
@@ -104,10 +107,13 @@ pop();
 
 //song
 function mousePressed() {
-  if (song.isPlaying()) {
-    song.pause();
-  } else {
-    song.play();
+  var d = dist(mouseX, mouseY, x + 50, y - 20)
+  if(d<80){
+    if (song.isPlaying()) {
+      song.pause();
+    } else {
+      song.play();
+    }
   }
 }
 //hover for info pic 1

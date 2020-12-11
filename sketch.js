@@ -67,26 +67,28 @@ if (song.isPlaying()) {
   text('Click to Play Music', 50, 30);
 }
 
-//info button
+//info button 1
 push();
 fill(50, 230)
 circle(130, 110, 35);
 fill(255);
 textSize(16)
 text('i', 128, 115);
-pop();
+pop()
 
-//info textbox picture 1
-if (mouseIsHovered()) {
+d1 = dist(mouseX, mouseY, 130, 110);
+
+if (d1 < 17.5) {
+  push();
   fill(50);
   rect(mouseX, mouseY, 200, 60);
   fill(255);
   text('Author: Victoria Oury', mouseX + 20, mouseY + 20);
   text('Title: Shanghai in Blue', mouseX +20, mouseY + 35);
   text('Time: Sep 2019', mouseX +20, mouseY + 50);
+  pop();
 }
-
-//info button (can't make a for loop as they are in different distances :( 
+//info button 2 (can't make a for loop as they are in different distances :( 
 push();
 fill(50, 230);
 circle(800, 110, 35);
@@ -94,16 +96,23 @@ fill(255);
 textSize(16);
 text('i', 798, 115);
 pop();
-//info textbox picture 2
-// if (mouseIsHovered()){
-//   fill(50);
-//   rect(mouseX, mouseY, 200, 60);
-//   fill(255);
-//   text('Author:', mouseX+ 20, mouseY +20);
-//   text('Title:', mouseX+20, mouseY+35);
-//   text('Time:', mouseX+20, mouseY+50);
-// } 
-}
+
+d2 = dist(mouseX, mouseY, 800, 110);
+
+if (d2 < 17.5) {
+  push()
+  fill(50);
+  rect(mouseX, mouseY, 200, 60);
+  fill(255);
+  text('Author:', mouseX+ 20, mouseY +20);
+  text('Title:', mouseX+20, mouseY+35);
+  text('Time:', mouseX+20, mouseY+50);
+  pop()
+} 
+
+
+
+ }
 
 //song
 function mousePressed() {

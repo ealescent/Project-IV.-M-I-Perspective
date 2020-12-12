@@ -78,7 +78,7 @@ pop()
   rect(610, 130, 170, 60);
   fill(255);
   text('Author: Victoria Oury', 610 + 10, 130 + 20);
-  text('Title: Shanghai in Blue', 610 + 10, 130 + 35);
+  text('Title: 上海 in Blue', 610 + 10, 130 + 35);
   text('Time: Sep 2019', 610 + 10, 130 + 50);
   pop();
 //info button 2 (can't make a for loop as they are in different distances :( 

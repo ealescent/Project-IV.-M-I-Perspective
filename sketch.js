@@ -33,11 +33,13 @@ image(bkg, i - frameCount/8, 50, 1136, 700);
 }
 //photos preview rects
 for(p = 800; p < 3000; p+=780) {
-fill(50);
+fill(50, 160);
 noStroke();
 rect(p, 100, 600, 600);
 //actual photos
 push();
+fill(50, 70)
+rect(140, 90, 468, 617)
 image(img, 150, 100, 3024/6.75, 4032/6.75);
 image(smile, 810, 110, 580, 580)
 image(lights, 2370, 110, 580, 580)
@@ -66,10 +68,10 @@ if (song.isPlaying()) {
 //info button 1
 push();
 fill(50, 230)
-circle(620, 110, 35);
+circle(630, 110, 35);
 fill(255);
 textSize(16)
-text('i', 618, 115);
+text('i', 628, 115);
 pop()
   push();
   fill(50);

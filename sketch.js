@@ -48,6 +48,9 @@ image(lights, 2370, 110, 580, 580)
 // console.log(img);
 pop();
 
+//PIXEL MANIPULATIONS
+//ETHAN SMILE MANIPULATION
+
 //slider info
 fill(50, 120);
 circle(50, 650, 70);

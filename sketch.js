@@ -4,12 +4,14 @@ let img;
 let smile;
 let lights;
 let song;
+let sunset;
 let x = 40;
 let y = 11;
 function preload() {
   img = loadImage('vone.jpg');
-  smile = loadImage('smile.JPG')
-  lights = loadImage('lights.JPG')
+  smile = loadImage('smile.JPG');
+  lights = loadImage('lights.JPG');
+  sunset = loadImage('pic2.jpg');
   song = loadSound('apocalypse.mp3');
     song.setVolume(0.07)
 }
@@ -39,6 +41,7 @@ push();
 image(img, 150, 100, 3024/6.75, 4032/6.75);
 image(smile, 810, 110, 580, 580)
 image(lights, 2370, 110, 580, 580)
+image(sunset, 1590, 110, 580, 580)
 // console.log(img);
 pop();
 //PIXEL MANIPULATIONS
@@ -99,15 +102,15 @@ fill(50, 230)
 circle(1560, 210, 35);
 fill(255);
 textSize(16)
-text('i', 1558, 115);
+text('i', 1558, 214);
 pop()
   push();
   fill(50);
   rect(1420, 230, 150, 60);
   fill(255);
   text('Author: Victoria Oury', 1420 + 10, 230 + 20);
-  text('Title:', 1420 + 10, 230 + 35);
-  text('Time:', 1420 + 10, 230 + 50);
+  text('Title: 杭州 in orange', 1420 + 10, 230 + 35);
+  text('Time: Winter break 2019', 1420 + 10, 230 + 50);
   pop();
   
 //Info Button 4

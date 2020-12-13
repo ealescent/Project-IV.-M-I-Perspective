@@ -228,7 +228,7 @@ function drawScene3() {
 }
 
 function drawEnding() {
-  image(lights, 2370, 110, 580, 580);
+image(lights, 2370, 110, 580, 580);
   lights.loadPixels();
     let c = 3;
     noStroke();

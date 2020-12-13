@@ -223,13 +223,29 @@ function drawScene2() {
 
 function drawScene3() {
 
-  image(xiangyun, 1950, 340, 220, 350);
+  // image(xiangyun, 1950, 340, 220, 350);
 
 }
 
 function drawEnding() {
-  fill(255);
-  ellipse(width / 2, height / 2, 100, 100);
-	fill(0);
-	text("End Scene", width / 2, height / 2);
+  image(lights, 2370, 110, 580, 580);
+  lights.loadPixels();
+    let c = 3;
+    noStroke();
+    for (let y = 110; y < 690; y += c) {
+      for (let x = 2370; x < 2950; x += c) {
+        let index = (x + y * lights.width) * 4;
+
+        let r = lights.pixels[index + 0];
+        let g = lights.pixels[index + 1];
+        let b = lights.pixels[index + 2];
+        let a = lights.pixels[index + 3];
+
+        let h = (r + g + b) / 9;
+        let size = map(b, 0, 255, 1, c / 10000);
+        fill(r, g, b, a / (5 * random()));
+        rect(x + random(0, 1), y + random() * 5, size + random(0, 50), size);
+      }
+  }
+  lights.updatePixels();
 }

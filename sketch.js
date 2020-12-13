@@ -9,6 +9,7 @@ let x = 40;
 let y = 11;
 let shang;
 let hai;
+let hang;
 
 function preload() {
   bkg = loadImage('wave.jpg');
@@ -20,6 +21,7 @@ function preload() {
   song.setVolume(0.1);
   shang = loadImage('shang.png');
   hai = loadImage('hai.png');
+  hang = loadImage('hang.jpg');
 }
 
 function setup() {
@@ -167,14 +169,8 @@ function nextScene() {
 }
 
 function drawIntro() {
-  fill(255);
-  ellipse(width / 2, height / 2, 100, 100);
-	fill("blue");
-  text("Intro", width / 2, 100);
-  }
-
-
-function drawScene1() {
+  
+    
   let q = random(1, 2);
   frameRate(q);
 let r = random(1, 1000)
@@ -188,10 +184,18 @@ let r = random(1, 1000)
     image(hai, d, s, 30, 30);
    }
  }
+  }
+
+
+function drawScene1() {
+  // fill(255);
+  // ellipse(width / 2, height / 2, 100, 100);
+	// fill("blue");
+  // text("Intro", width / 2, 100);
 }
 
 function drawScene2() {
-
+  push();
   image(smile, 810, 110, 580, 580);
   smile.loadPixels();
 
@@ -213,9 +217,13 @@ function drawScene2() {
       }
     }
   smile.updatePixels();
+  pop();
+
 }
 
 function drawScene3() {
+
+  image(xiangyun, 1950, 340, 220, 350);
 
 }
 

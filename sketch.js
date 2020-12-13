@@ -252,9 +252,9 @@ function drawScene3() {
 function drawEnding() {
 image(lights, 2370, 110, 580, 580);
   lights.loadPixels();
-    let c = 3;
+    let c = 4;
     noStroke();
-    for (let y = 110; y < 690; y += c) {
+    for (let y = 110; y < 800; y += c) {
       for (let x = 2370; x < 2950; x += c) {
         let index = (x + y * lights.width) * 4;
 

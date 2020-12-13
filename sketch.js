@@ -222,7 +222,29 @@ function drawScene2() {
 }
 
 function drawScene3() {
+  push();
+  image(sunset, 1580, 110, 580, 580);
+  sunset.loadPixels();
 
+    let  c = 6;
+    noStroke();
+    for (let y = 110; y < 690; y += c) {
+      for (let x = 1700; x < 2060; x += c) {
+        let index = (x + y * sunset.width) * 4;
+
+        let r = sunset.pixels[index + 0];
+        let g = sunset.pixels[index + 1];
+        let b = sunset.pixels[index + 2];
+        let a = sunset.pixels[index + 3];
+
+        let h = (r + g + b) / 9;
+        let size = map(b, 0, 255, 1, c/10000);
+        fill(r, g, b, a / (5 * random()));
+        ellipse(x + random(0, 1), y + random() * 5, size + random(0, 40), size + 20);
+      }
+    }
+  sunset.updatePixels();
+  pop();
   // image(xiangyun, 1950, 340, 220, 350);
 
 }

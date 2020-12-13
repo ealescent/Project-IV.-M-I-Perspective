@@ -62,7 +62,7 @@ function setup() {
   text('i', 2338, 515);
   textSize(12);
   text('Author: Victoria Oury', 610 + 10, 130 + 20);
-  text('Title: 上海 in Blue', 610 + 10, 130 + 35);
+  text('Title: 上海 Crowd', 610 + 10, 130 + 35);
   text('Time: Sep 2019', 610 + 10, 130 + 50);
   text('Author: Ethan Lan', 640 + 10, 590 + 20);
   text('Title: "Smile!"', 640 + 10, 590 + 35);

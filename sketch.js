@@ -7,6 +7,8 @@ let lights;
 let song;
 let x = 40;
 let y = 11;
+let shang;
+let hai;
 
 function preload() {
   bkg = loadImage('wave.jpg');
@@ -16,6 +18,8 @@ function preload() {
   lights = loadImage('lights.jpg');
   song = loadSound('apocalypse.mp3');
   song.setVolume(0.1);
+  shang = loadImage('shang.png');
+  hai = loadImage('hai.png');
 }
 
 function setup() {
@@ -85,14 +89,14 @@ image(lights, 2370, 110, 580, 580);
 fill(255, 100);
 rect(x, y, 158, 30, 10);
 //scenes info box
-rect(210, 11, 268, 30, 10);
+rect(210, 11, 224, 30, 10);
 fill(255);
 if (song.isPlaying()) {
   text('Click M key to Stop Music', 50, 30);
 } else {
   text('Click M key to Play Music', 50, 30);
 }
-text('Press N key to interact with subsequent photos', 220, 30);
+text('Click the mouse to activate the photos', 220, 30);
 
 
 // slider = createSlider(0, 1500, 0);
@@ -143,7 +147,7 @@ function keyPressed() {
 
 function mousePressed() {
   if (mouseX < width) {
-		previousScene();
+    previousScene();
 	} else {
 		nextScene();
 	}
@@ -161,40 +165,49 @@ function nextScene() {
 }
 
 function drawIntro() {
-  // fill(255);
-  // ellipse(width / 2, height / 2, 100, 100);
-	// fill("blue");
-  // text("Intro", width / 2, height / 2);
-  //image(shanghai, 150, 100, 3024/6.75, 4032/6.75);
-
-  shanghai.loadPixels();
-
-  let gridSize = 7;
-  noStroke();
-  for (let y = 100; y < 700; y+= gridSize) {
-    for (let x = 150; x < 60; x+= gridSize) {
-
-      let index = (x + y*shanghai.width) * 4;
-
-      let r = shanghai.pixels[index + 0];
-      let g = shanghai.pixels[index +1];
-      let b = shanghai.pixels[index +2];
-
-      let avg = (r+g+b)/ 3
-      let size = map(avg, 0, 255, 1, gridSize*2);
-      fill(r,g,b);
-      ellipse(x + random(0,4), y+random()*5, 2*size+random(0,4), size);
-    }
+  fill(255);
+  ellipse(width / 2, height / 2, 100, 100);
+	fill("blue");
+  text("Intro", width / 2, 100);
   }
-shanghai.updatePixels();
 
-}
 
 function drawScene1() {
-  fill(0, 255, 255);
-  rect(width / 2, height / 2, 200, 200);
-	fill(0);
-	text("Scene 1", width / 2, height / 2);
+  let q = random(1, 2);
+  frameRate(q);
+let r = random(1, 1000)
+  for (k = 150; k < 126+3024/6.75; k+=r) {
+    for (f = 100; f < 76+4032/6.75; f+=r ){
+      image(shang, k, f, 30, 30);
+    }
+  }
+ for (d = 150; d <126+3024/6.75; d+= r + 30){
+   for(s = 100; s < 76+4032/6.75; s+= r+ 30){
+    image(hai, d, s, 30, 30);
+   }
+ }
+  
+// image(smile, 810, 110, 580, 580);
+  // smile.loadPixels();
+
+  //   let  c = 3;
+  //   noStroke();
+  //   for (let y = 110; y < 580; y += c) {
+  //     for (let x = 810; x < smile.width; x += c) {
+  //       let index = (x + y * smile.width) * 4;
+
+  //       let r = smile.pixels[index + 0];
+  //       let g = smile.pixels[index + 1];
+  //       let b = smile.pixels[index + 2];
+  //       let a = smile.pixels[index + 3];
+
+  //       let h = (r + g + b) / 9;
+  //       let size = map(b, 0, 255, 1, c / 10000);
+  //       fill(r, g, b, a / (5 * random()));
+  //       ellipse(x + random(0, 1), y + random() * 5, size + random(0, 40), size + 20);
+  //     }
+  //   }
+  // smile.updatePixels();
 }
 
 function drawScene2() {

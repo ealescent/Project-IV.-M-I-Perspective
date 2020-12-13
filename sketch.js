@@ -13,7 +13,7 @@ let hai;
 function preload() {
   bkg = loadImage('wave.jpg');
   shanghai = loadImage('vone.jpg');
-  smile = loadImage('smile.jpg');
+  smile = loadImage('smile.JPG');
   sunset = loadImage('pic2.jpg');
   lights = loadImage('lights.jpg');
   song = loadSound('apocalypse.mp3');

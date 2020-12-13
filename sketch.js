@@ -240,7 +240,7 @@ function drawScene3() {
         let h = (r + g + b) / 9;
         let size = map(b, 0, 255, 1, c/10000);
         fill(r, g, b, a / (5 * random()));
-        ellipse(x + random(0, 1), y + random() * 5, size + random(0, 40), size + 20);
+        ellipse(x + random(0, 1), y + random() * 5, size + random(0, 5), size + 20);
       }
     }
   sunset.updatePixels();

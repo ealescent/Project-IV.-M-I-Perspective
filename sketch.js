@@ -229,7 +229,7 @@ function drawScene3() {
     let  c = 6;
     noStroke();
     for (let y = 110; y < 690; y += c) {
-      for (let x = 1700; x < 2060; x += c) {
+      for (let x = 1600; x < 2160; x += c) {
         let index = (x + y * sunset.width) * 4;
 
         let r = sunset.pixels[index + 0];

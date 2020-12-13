@@ -84,12 +84,15 @@ image(lights, 2370, 110, 580, 580);
 //song
 fill(255, 100);
 rect(x, y, 158, 30, 10);
+//scenes info box
+rect(210, 11, 268, 30, 10);
 fill(255);
 if (song.isPlaying()) {
   text('Click M key to Stop Music', 50, 30);
 } else {
   text('Click M key to Play Music', 50, 30);
 }
+text('Press N key to interact with subsequent photos', 220, 30);
 }
 
 function draw() {
@@ -105,11 +108,11 @@ function draw() {
   }
 
   text("Click left or right of the center to change scenes.", width / 2, 50);
-
 }
+
 // scenes control keys
 function keyPressed() {
-  if (keyCode === RIGHT_ARROW) {
+  if (keyCode === 78) {
 		previousScene();
 	} else {
 		nextScene();

@@ -93,6 +93,12 @@ if (song.isPlaying()) {
   text('Click M key to Play Music', 50, 30);
 }
 text('Press N key to interact with subsequent photos', 220, 30);
+
+
+// slider = createSlider(0, 1500, 0);
+// slider.position(25, 760);
+// slider.style('width', '950px');
+
 }
 
 function draw() {
@@ -108,15 +114,11 @@ function draw() {
   }
 
   text("Click left or right of the center to change scenes.", width / 2, 50);
-}
 
-// scenes control keys
-function keyPressed() {
-  if (keyCode === 78) {
-		previousScene();
-	} else {
-		nextScene();
-	}
+  // let val = slider.value();
+  // translate(-val*1.33, 0)
+
+
 }
 
 //song key M control
@@ -130,10 +132,27 @@ function keyPressed() {
   }
 }
 
+// // scenes control keys
+// function keyPressed() {
+//   if (keyCode === 78) {
+// 		previousScene();
+// 	} else {
+// 		nextScene();
+// 	}
+// }
+
+function mousePressed() {
+  if (mouseX < width) {
+		previousScene();
+	} else {
+		nextScene();
+	}
+}
+
 function previousScene() {
 	sceneIndex--;
 	if (sceneIndex < 0) {
-		sceneIndex = 4;
+		sceneIndex = 3;
 	}
 }
 

@@ -83,23 +83,12 @@ image(lights, 2370, 110, 580, 580);
 
 //song
 fill(255, 100);
-rect(x, y, 120, 30, 10);
+rect(x, y, 158, 30, 10);
 fill(255);
 if (song.isPlaying()) {
-  text('Click to Stop Music', 50, 30);
+  text('Click M key to Stop Music', 50, 30);
 } else {
-  text('Click to Play Music', 50, 30);
-}
-
-function mousePressed() {
-  var d = dist(mouseX, mouseY, x + 50, y - 20)
-  if (d < 80) {
-  if (song.isPlaying()) {
-    song.pause();
-  } else {
-    song.play();
-  }
-  }
+  text('Click M key to Play Music', 50, 30);
 }
 }
 
@@ -109,13 +98,16 @@ function draw() {
     drawIntro();
   } else if (sceneIndex === 1) {
     drawScene1();
+  } else if (sceneIndex === 2) {
+    drawScene2();
   } else {
     drawEnding();
   }
 
   text("Click left or right of the center to change scenes.", width / 2, 50);
-}
 
+}
+// scenes control keys
 function keyPressed() {
   if (keyCode === RIGHT_ARROW) {
 		previousScene();
@@ -124,10 +116,21 @@ function keyPressed() {
 	}
 }
 
+//song key M control
+function keyPressed() {
+  if (keyCode === 77) {
+  if (song.isPlaying()) {
+    song.pause();
+  } else {
+    song.play();
+  }
+  }
+}
+
 function previousScene() {
 	sceneIndex--;
 	if (sceneIndex < 0) {
-		sceneIndex = 3;
+		sceneIndex = 4;
 	}
 }
 
@@ -144,6 +147,13 @@ function drawIntro() {
 
 function drawScene1() {
   fill(0, 255, 255);
+  rect(width / 2, height / 2, 200, 200);
+	fill(0);
+	text("Scene 1", width / 2, height / 2);
+}
+
+function drawScene2() {
+  fill(50);
   rect(width / 2, height / 2, 200, 200);
 	fill(0);
 	text("Scene 1", width / 2, height / 2);

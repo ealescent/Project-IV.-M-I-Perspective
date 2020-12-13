@@ -113,6 +113,8 @@ function draw() {
     drawScene1();
   } else if (sceneIndex === 2) {
     drawScene2();
+  } else if (sceneIndex === 3) {
+    drawScene3();
   } else {
     drawEnding();
   }
@@ -156,7 +158,7 @@ function mousePressed() {
 function previousScene() {
 	sceneIndex--;
 	if (sceneIndex < 0) {
-		sceneIndex = 3;
+		sceneIndex = 4;
 	}
 }
 
@@ -211,6 +213,10 @@ function drawScene2() {
       }
     }
   smile.updatePixels();
+}
+
+function drawScene3() {
+
 }
 
 function drawEnding() {

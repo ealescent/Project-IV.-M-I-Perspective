@@ -193,10 +193,10 @@ function drawScene2() {
   image(smile, 810, 110, 580, 580);
   smile.loadPixels();
 
-    let  c = 3;
+    let  c = 6;
     noStroke();
-    for (let y = 110; y < 580; y += c) {
-      for (let x = 810; x < smile.width; x += c) {
+    for (let y = 110; y < 690; y += c) {
+      for (let x = 810; x < 1390; x += c) {
         let index = (x + y * smile.width) * 4;
 
         let r = smile.pixels[index + 0];
@@ -205,7 +205,7 @@ function drawScene2() {
         let a = smile.pixels[index + 3];
 
         let h = (r + g + b) / 9;
-        let size = map(b, 0, 255, 1, c / 10000);
+        let size = map(b, 0, 255, 1, c/10000);
         fill(r, g, b, a / (5 * random()));
         ellipse(x + random(0, 1), y + random() * 5, size + random(0, 40), size + 20);
       }

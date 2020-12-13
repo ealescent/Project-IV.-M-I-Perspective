@@ -186,8 +186,11 @@ let r = random(1, 1000)
     image(hai, d, s, 30, 30);
    }
  }
-  
-// image(smile, 810, 110, 580, 580);
+}
+
+function drawScene2() {
+
+  // image(smile, 810, 110, 580, 580);
   // smile.loadPixels();
 
   //   let  c = 3;
@@ -208,13 +211,6 @@ let r = random(1, 1000)
   //     }
   //   }
   // smile.updatePixels();
-}
-
-function drawScene2() {
-  fill(50);
-  rect(width / 2, height / 2, 200, 200);
-	fill(0);
-	text("Scene 1", width / 2, height / 2);
 }
 
 function drawEnding() {

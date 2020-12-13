@@ -161,10 +161,33 @@ function nextScene() {
 }
 
 function drawIntro() {
-  fill(255);
-  ellipse(width / 2, height / 2, 100, 100);
-	fill("blue");
-	text("Intro", width / 2, height / 2);
+  // fill(255);
+  // ellipse(width / 2, height / 2, 100, 100);
+	// fill("blue");
+  // text("Intro", width / 2, height / 2);
+  //image(shanghai, 150, 100, 3024/6.75, 4032/6.75);
+
+  shanghai.loadPixels();
+
+  let gridSize = 7;
+  noStroke();
+  for (let y = 100; y < 700; y+= gridSize) {
+    for (let x = 150; x < 60; x+= gridSize) {
+
+      let index = (x + y*shanghai.width) * 4;
+
+      let r = shanghai.pixels[index + 0];
+      let g = shanghai.pixels[index +1];
+      let b = shanghai.pixels[index +2];
+
+      let avg = (r+g+b)/ 3
+      let size = map(avg, 0, 255, 1, gridSize*2);
+      fill(r,g,b);
+      ellipse(x + random(0,4), y+random()*5, 2*size+random(0,4), size);
+    }
+  }
+shanghai.updatePixels();
+
 }
 
 function drawScene1() {

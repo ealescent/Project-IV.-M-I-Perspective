@@ -121,7 +121,7 @@ function draw() {
     drawEnding();
   }
 
-  text("Click left or right of the center to change scenes.", width / 2, 50);
+  //text("Click left or right of the center to change scenes.", width / 2, 50);
 
   // let val = slider.value();
   // translate(-val*1.33, 0)

@@ -151,9 +151,9 @@ function keyPressed() {
 
 function mousePressed() {
   if (mouseX < width) {
-    previousScene();
+    nextScene();
 	} else {
-		nextScene();
+		previousScene();
 	}
 }
 
@@ -169,66 +169,27 @@ function nextScene() {
 }
 
 function drawIntro() {
-   // fill(255);
-  // ellipse(width / 2, height / 2, 100, 100);
-	// fill("blue");
-  // text("Intro", width / 2, 100);
+   
   }
 
 
 function drawScene1() {
-  image(lights, 2370, 110, 580, 580);
-  lights.loadPixels();
-    let c = 4;
-    noStroke();
-    for (let y = 110; y < 800; y += c) {
-      for (let x = 2370; x < 2950; x += c) {
-        let index = (x + y * lights.width) * 4;
-
-        let r = lights.pixels[index + 0];
-        let g = lights.pixels[index + 1];
-        let b = lights.pixels[index + 2];
-        let a = lights.pixels[index + 3];
-
-        let h = (r + g + b) / 9;
-        let size = map(b, 0, 255, 1, c / 10000);
-        fill(r, g, b, a / (5 * random()));
-        rect(x + random(0, 1), y + random() * 5, size + random(0, 50), size);
-      }
+  let q = random(1, 2);
+  frameRate(q);
+let r = random(1, 1000)
+  for (k = 150; k < 126+3024/6.75; k+=r) {
+    for (f = 100; f < 76+4032/6.75; f+=r ){
+      image(shang, k, f, 30, 30);
+    }
   }
-  lights.updatePixels();
+ for (d = 150; d <126+3024/6.75; d+= r + 30){
+   for(s = 100; s < 76+4032/6.75; s+= r+ 30){
+    image(hai, d, s, 30, 30);
+   }
+ }
 }
 
 function drawScene2() {
- 
-  push();
-  image(sunset, 1580, 110, 580, 580);
-  sunset.loadPixels();
-
-    let  c = 6;
-    noStroke();
-    for (let y = 110; y < 690; y += c) {
-      for (let x = 1600; x < 2160; x += c) {
-        let index = (x + y * sunset.width) * 4;
-
-        let r = sunset.pixels[index + 0];
-        let g = sunset.pixels[index + 1];
-        let b = sunset.pixels[index + 2];
-        let a = sunset.pixels[index + 3];
-
-        let h = (r + g + b) / 9;
-        let size = map(b, 0, 255, 1, c/10000);
-        fill(r, g, b, a / (5 * random()));
-        ellipse(x + random(0, 1), y + random() * 5, size + random(0, 5), size + 20);
-      }
-    }
-  sunset.updatePixels();
-  pop();
-
-
-}
-
-function drawScene3() {
 
   push();
   image(smile, 810, 110, 580, 580);
@@ -254,21 +215,56 @@ function drawScene3() {
   smile.updatePixels();
   pop();
 
+
+}
+
+function drawScene3() {
+
+  push();
+  image(sunset, 1580, 110, 580, 580);
+  sunset.loadPixels();
+
+    let  c = 6;
+    noStroke();
+    for (let y = 110; y < 690; y += c) {
+      for (let x = 1600; x < 2160; x += c) {
+        let index = (x + y * sunset.width) * 4;
+
+        let r = sunset.pixels[index + 0];
+        let g = sunset.pixels[index + 1];
+        let b = sunset.pixels[index + 2];
+        let a = sunset.pixels[index + 3];
+
+        let h = (r + g + b) / 9;
+        let size = map(b, 0, 255, 1, c/10000);
+        fill(r, g, b, a / (5 * random()));
+        ellipse(x + random(0, 1), y + random() * 5, size + random(0, 5), size + 20);
+      }
+    }
+  sunset.updatePixels();
+  pop();
 }
 
 function drawEnding() {
 
-  let q = random(1, 2);
-  frameRate(q);
-let r = random(1, 1000)
-  for (k = 150; k < 126+3024/6.75; k+=r) {
-    for (f = 100; f < 76+4032/6.75; f+=r ){
-      image(shang, k, f, 30, 30);
-    }
-  }
- for (d = 150; d <126+3024/6.75; d+= r + 30){
-   for(s = 100; s < 76+4032/6.75; s+= r+ 30){
-    image(hai, d, s, 30, 30);
-   }
+ image(lights, 2370, 110, 580, 580);
+ lights.loadPixels();
+   let c = 4;
+   noStroke();
+   for (let y = 110; y < 800; y += c) {
+     for (let x = 2370; x < 2950; x += c) {
+       let index = (x + y * lights.width) * 4;
+
+       let r = lights.pixels[index + 0];
+       let g = lights.pixels[index + 1];
+       let b = lights.pixels[index + 2];
+       let a = lights.pixels[index + 3];
+
+       let h = (r + g + b) / 9;
+       let size = map(b, 0, 255, 1, c / 10000);
+       fill(r, g, b, a / (5 * random()));
+       rect(x + random(0, 1), y + random() * 5, size + random(0, 50), size);
+     }
  }
+ lights.updatePixels();
 }

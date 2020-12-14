@@ -27,7 +27,7 @@ function preload() {
 function setup() {
   createCanvas(3100, 800);
   background(23, 31, 38);
-
+textFont("Arial")
   //looping waves
   for (i = 0; i < 3100; i+=1000) {
     image(bkg, i, 50, 1000, 750);
@@ -98,7 +98,7 @@ if (song.isPlaying()) {
 } else {
   text('Click M key to Play Music', 50, 30);
 }
-text('Click the mouse to activate the photos', 220, 30);
+text('Click The Mouse to Activate the Photos', 220, 30);
 
 
 // slider = createSlider(0, 1500, 0);

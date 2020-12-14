@@ -91,7 +91,7 @@ image(lights, 2370, 110, 580, 580);
 fill(255, 100);
 rect(x, y, 158, 30, 10);
 //scenes info box
-rect(210, 11, 224, 30, 10);
+rect(210, 11, 230, 30, 10);
 fill(255);
 if (song.isPlaying()) {
   text('Click M key to Stop Music', 50, 30);
@@ -142,10 +142,10 @@ function keyPressed() {
 
 // // scenes control keys
 // function keyPressed() {
-//   if (keyCode === 78) {
-// 		previousScene();
-// 	} else {
+//   if (keyCode === RIGHT_ARROW) {
 // 		nextScene();
+// 	} else {
+// 		previousScene();
 // 	}
 // }
 
